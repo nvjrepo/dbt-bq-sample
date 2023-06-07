@@ -30,16 +30,16 @@ clean-targets:         # directories to be removed by `dbt clean`
 models:
   pacc_dbt:
     staging:
-      +database: "{{ 'pacc-analytics-prod' if target.name == 'prod' else 'pacc-analytics' }}"
+      +database: "{{ 'analytics-prod' if target.name == 'prod' else 'analytics-dev' }}"
 
     int:
       +materialized: ephemeral
-      +database: "{{ 'pacc-analytics-prod' if target.name == 'prod' else 'pacc-analytics' }}"
+      +database: "{{ 'analytics-prod' if target.name == 'prod' else 'analytics-dev' }}"
       metrics:
         +materialized: table
         
     marts:
-      +database: "{{ 'pacc-analytics-prod' if target.name == 'prod' else 'pacc-analytics' }}"
+      +database: "{{ 'analytics-prod' if target.name == 'prod' else 'analytics-dev' }}"
       accounting:
         +materialized: table
       commercial:
@@ -57,4 +57,4 @@ models:
 
 
 seeds:
-  +database: "{{ 'pacc-analytics-prod' if target.name == 'prod' else 'pacc-analytics' }}"
+  +database: "{{ 'analytics-prod' if target.name == 'prod' else 'analytics-dev' }}"
