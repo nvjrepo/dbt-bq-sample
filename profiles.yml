@@ -1,0 +1,24 @@
+pacc_dbt:
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      method: service-account
+      project: pacc-analytics
+      dataset: vi_pacc
+      threads: 8
+      timeout_second: 300
+      priority: interactive
+      location: asia-southeast1
+      keyfile: "{{ env_var('PACC_SA_ANALYTICS') }}"
+
+    
+    prod:
+      type: bigquery
+      method: service-account
+      project: pacc-analytics-prod
+      dataset: pacc
+      location: asia-southeast1
+      threads: 8
+      timeout_second: 300
+      priority: interactive
