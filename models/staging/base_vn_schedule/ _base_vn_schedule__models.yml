@@ -1,0 +1,10 @@
+version: 2
+
+models:
+  - name: stg_base_vn_schedule__shift
+    description: provide info of checkin & out finalized weekly by HR
+    columns:
+      - name: unique_id
+        tests:
+          - unique
+          - not_null

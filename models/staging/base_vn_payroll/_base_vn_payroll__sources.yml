@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+  - name: basevn_payroll
+    database: pacc-raw-data
+    dataset: BASEVN_PAYROLL
+    tables:
+      - name: cycle
+      - name: payroll
+      - name: record

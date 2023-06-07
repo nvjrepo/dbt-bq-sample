@@ -1,0 +1,57 @@
+version: 2
+
+models:
+  - name: stg_ipos_accounting__ledgers
+    columns:
+      - name: unique_id
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_ipos_accounting__sale_details
+    columns:
+      - name: unique_id
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_ipos_accounting__bom
+    description: recipe of final products
+    columns:
+      - name: pr_key
+        tests:
+          - unique
+          - not_null      
+
+  - name: stg_ipos_accounting__sale_base_price
+    description: cost of raw material by period
+    columns:
+      - name: pr_key
+        tests:
+          - unique:
+              severity: warn
+          - not_null
+
+  - name: stg_ipos_accounting__warehouses
+    description: stock movement
+    columns:
+      - name: unique_id
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_ipos_accounting__warehouse_balances
+    description: stock balance
+    columns:
+      - name: unique_id
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_ipos_accounting__raw_materials
+    description: raw materials information
+    columns:
+      - name: item_id
+        tests:
+          - unique
+          - not_null

@@ -1,0 +1,26 @@
+version: 2
+
+models:
+  - name: fct_cs_calls
+    description:  inbound calls, outbound calls, missed called
+    columns:
+      - name: unique_id
+        tests:
+          - unique
+          - not_null
+models:
+  - name: fct_cs_bookings
+    description:  no of booking counts, success rate, key dims including time, sessions, channel, outlet
+    columns:
+      - name: unique_id
+        tests:
+          - unique
+          - not_null          
+models:
+  - name: fct_cs_feedbacks
+    description:  no of rating & rating score, reference score, NPS generate  
+    columns:
+      - name: unique_id
+        tests:
+          - unique
+          - not_null                  

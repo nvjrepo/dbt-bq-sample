@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: worldfone
+    database:  pacc-raw-data
+    dataset: WORLDFONE
+    tables:
+      - name: cdrs
+        description: contain data of inbound/ outbonphone call to CS , for UI of data please refer this website https://apps.worldfone.vn/worldfonepbx/reports

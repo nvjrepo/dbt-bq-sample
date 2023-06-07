@@ -1,0 +1,27 @@
+version: 2
+
+sources:
+  - name: ipos_crm
+    database:  pacc-raw-data
+    dataset: IPOS_CRM
+    tables:
+      - name: campaigns
+
+  - name: ipos_crm_bgn
+    database:  pacc-raw-data
+    dataset: IPOS_CRM_BGN
+    tables:
+      - name: membership_detail
+      - name: member_vouchers
+      - name: member_rating
+      - name: campaigns
+
+  - name: ipos_crm_5wine
+    database:  pacc-raw-data
+    dataset: IPOS_CRM_5WINE
+    tables:
+      - name: membership_detail
+      - name: member_vouchers
+      - name: member_rating
+      - name: campaigns
+      

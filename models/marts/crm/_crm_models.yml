@@ -1,0 +1,10 @@
+version: 2
+
+models:
+  - name: fct_crm_call_center_metrics
+    description: the model provides metrics of inbound calls, outbound calls, missing time
+    columns:
+      - name: unique_id
+        tests:
+          - unique
+          - not_null

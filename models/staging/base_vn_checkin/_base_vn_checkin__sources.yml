@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: base_checkin
+    database:  pacc-raw-data
+    dataset: BASEVN_CHECKIN
+    tables:
+      - name: checkin_logs

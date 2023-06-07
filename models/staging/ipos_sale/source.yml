@@ -1,0 +1,16 @@
+version: 2
+
+sources:
+  - name: ipos_sale
+    database:  pacc-raw-data
+    dataset: IPOS_SALE
+    tables:
+      - name: sale_detail
+      - name: sale
+      - name: dm_item
+      - name: dm_dinner_table
+      - name: dm_extra_2
+      - name: dm_membership_type
+      - name: dm_membership
+      - name: dm_membership_discount
+      - name: order_menu_log

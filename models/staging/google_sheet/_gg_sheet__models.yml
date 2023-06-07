@@ -1,0 +1,50 @@
+version: 2
+
+models:
+  - name: stg_we_expenses
+
+    columns:
+      - name: unique_id
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_gg_sheet__bis_code
+
+    columns:
+      - name: outlet_code
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_item_mapping
+
+    columns:
+      - name: item_id
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_gg_sheet__yearly_targets
+
+    columns:
+      - name: unique_id
+        tests:
+          - unique
+          - not_null
+          
+  - name: stg_ggsheet_customer_feedbacks
+
+    columns:
+      - name: unique_id
+        tests:
+          - unique
+          - not_null          
+
+  - name: stg_gg_sheet_bookings
+    description: data booking inputed from ggsheet file https://shorturl.at/jlsAT
+    columns:
+      - name: unique_id
+        tests:
+          - unique
+          - not_null          

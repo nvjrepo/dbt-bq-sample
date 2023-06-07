@@ -1,0 +1,26 @@
+version: 2
+
+models:
+  - name: fct_demand_planning
+
+    columns:
+      - name: unique_id
+        tests:
+          - unique
+          - not_null
+
+  - name: fct_demand_supply_target
+
+    columns:
+      - name: unique_id
+        tests:
+          - unique
+          - not_null
+
+  - name: fct_inventory_movement
+
+    columns:
+      - name: unique_id
+        tests:
+          - unique
+          - not_null

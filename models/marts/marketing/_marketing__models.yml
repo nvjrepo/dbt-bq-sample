@@ -1,0 +1,13 @@
+version: 2
+
+models:
+  - name: fct_voucher_metrics
+    description: the model provides metrics of issued and used vouchers
+        for a given membership in a given date
+    columns:
+      - name: unique_id
+        tests:
+          - unique:
+              config:
+                severity: warn
+          - not_null

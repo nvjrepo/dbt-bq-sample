@@ -1,0 +1,19 @@
+version: 2
+
+sources:
+  - name: base_hrm
+    database:  pacc-raw-data
+    dataset: BASEVN_HRM
+    tables:
+      - name: area
+      - name: contract_types
+      - name: employee
+      - name: employee_legals
+      - name: employee_types
+      - name: insurance
+      - name: office
+      - name: position
+      - name: position_types
+      - name: tax
+      - name: team
+      - name: timesheet

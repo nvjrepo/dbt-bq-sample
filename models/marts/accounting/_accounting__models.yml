@@ -1,0 +1,44 @@
+version: 2
+
+models:
+  - name: fct_income_statement
+
+    columns:
+      - name: unique_id
+        tests:
+          - unique
+          - not_null
+
+  - name: fct_cashflow_benchmark
+
+    columns:
+      - name: unique_id
+        tests:
+          - unique
+          - not_null
+
+  - name: fct_pl_benchmark
+
+    columns:
+      - name: unique_id
+        tests:
+          - unique
+          - not_null
+
+  - name: fct_product_cost_index
+    description:  tracking monthly average cost of each item_id (155, 156)
+
+    columns:
+      - name: unique_id
+        tests:
+          - unique
+          - not_null
+
+  - name: fct_material_cost_index
+    description: tracking monthly average imported cost of each item_id (152, 153)
+
+    columns:
+      - name: unique_id
+        tests:
+          - unique
+          - not_null

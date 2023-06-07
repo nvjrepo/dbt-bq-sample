@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: accounting_gcs
+    database:  pacc-raw-data
+    dataset: ACCOUNTING_GCS
+    tables:
+      - name: cashflow_forecast
+      - name: pl_forecast

@@ -1,0 +1,47 @@
+version: 2
+
+models:
+  - name: int_revenue_expenses
+    description: '{{ doc("int_revenue_expenses") }}'
+    tests: 
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns:
+            - tran_week
+            - tran_month 
+            - branch 
+            - pl1 
+            - pl2 
+            - pl3
+
+  - name: int_cashflow_forecast_pivoted
+    tests:
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns:
+            - date_month
+            - cf_code
+            
+  - name: int_pl_forecast_pivoted
+    tests:
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns:
+            - expense_id
+            - date_month
+
+  - name: int_pl_metrics_unioned
+    description: '{{ doc("int_pl_metrics_unioned") }}'
+    tests: 
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns:
+            - tran_week
+            - tran_month 
+            - branch 
+            - pl1 
+            - pl2 
+            - pl3
+            
+  - name: int_pl_net_sales_segment_joined
+    description: >
+      join model int_pl_metrics_unioned with net sale ops metrics.
+      if pl1 fall into COGs sections of [category], it will match net sales of [category]
+      other cases will match net sales of all categories
+      categories of operation include food, beverage and others from net sales at the restaurant

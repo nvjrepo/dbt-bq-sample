@@ -1,0 +1,26 @@
+version: 2
+
+models:
+  - name: fct_employee_payrolls
+    description : '{{ doc("fct_employee_payrolls") }}'
+    columns:
+      - name: unique_id
+        tests:
+          - unique
+          - not_null
+
+  - name: dim_employees
+
+    columns:
+      - name: employee_id
+        tests:
+          - unique
+          - not_null
+          
+  - name: fct_weekly_col_index
+    description: '{{ doc("fct_weekly_col_index") }}' 
+    columns:
+      - name: unique_id
+        tests:
+          - unique
+          - not_null          

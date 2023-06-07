@@ -1,0 +1,24 @@
+version: 2
+
+models:
+  - name: stg_base_vn_ehiring__openings
+    columns:
+      - name: opening_id
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_base_vn_ehiring__candidates
+    tag: ['pii']
+    columns:
+      - name: candidate_id
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_base_vn__interviews
+    columns:
+      - name: interview_id
+        tests:
+          - unique
+          - not_null

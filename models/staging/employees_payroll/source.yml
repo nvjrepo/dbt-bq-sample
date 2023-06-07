@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: human_resources
+    database:  pacc-raw-data
+    dataset: HUMAN_RESOURCE_DEPT
+    tables:
+      - name: payroll

@@ -1,0 +1,10 @@
+version: 2
+
+models:
+  - name: stg_payroll
+
+    columns:
+      - name: unique_id
+        tests:
+          - unique
+          - not_null

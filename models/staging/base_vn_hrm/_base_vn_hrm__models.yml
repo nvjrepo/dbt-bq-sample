@@ -1,0 +1,87 @@
+version: 2
+
+models:
+  - name: stg_base_vn_hrm__employees
+    tag: ['pii']
+    columns:
+      - name: employee_id
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_base_vn_hrm__areas
+    columns:
+      - name: area_id
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_base_vn_hrm__contract_types
+    columns:
+      - name: contract_type_id
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_base_vn_hrm__employee_legals
+    columns:
+      - name: employee_legal_id
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_base_vn_hrm__employee_types
+    columns:
+      - name: employee_type_id
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_base_vn_hrm__insurances
+    columns:
+      - name: insurance_id
+        tests:
+          - unique
+          - not_null        
+
+  - name: stg_base_vn_hrm__offices
+    columns:
+      - name: office_id
+        tests:
+          - unique
+          - not_null          
+
+  - name: stg_base_vn_hrm__positions
+    columns:
+      - name: position_id
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_base_vn_hrm__position_types
+    columns:
+      - name: position_type_id
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_base_vn_hrm__taxes
+    columns:
+      - name: tax_id
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_base_vn_hrm__teams
+    columns:
+      - name: team_id
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_base_vn_hrm__timesheets
+    columns:
+      - name: timesheet_id
+        tests:
+          - unique
+          - not_null

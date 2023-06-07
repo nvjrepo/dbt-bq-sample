@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: demand_planning
+    database:  pacc-raw-data
+    dataset: DEMAND_PLANNING
+    tables:
+      - name: current_demand_planning_fixed
+      - name: historical_demand_planning_fixed

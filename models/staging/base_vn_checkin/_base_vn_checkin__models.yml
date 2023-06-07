@@ -1,0 +1,9 @@
+version: 2
+
+models:
+  - name: stg_base_vn_checkin__logs
+    columns:
+      - name: unique_id
+        tests:
+          - unique
+          - not_null

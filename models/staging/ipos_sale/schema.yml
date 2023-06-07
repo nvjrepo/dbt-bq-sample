@@ -1,0 +1,44 @@
+version: 2
+
+models:
+  - name: stg_ipos_sales
+    columns:
+      - name: unique_id
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_ipos_sale_details
+    columns:
+      - name: unique_id
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_sku_items
+    columns:
+      - name: sku_code
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_delivery_information
+    columns:
+      - name: party_id
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_ipos_sale__membership_types
+    columns:
+      - name: membership_type_id
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_ipos_sale__membership_discounts
+    columns:
+      - name: pr_key
+        tests:
+          - unique
+          - not_null

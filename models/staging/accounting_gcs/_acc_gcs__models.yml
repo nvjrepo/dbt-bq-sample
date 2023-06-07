@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: stg_acc_gcs__cashflow_forecast
+    columns:
+      - name: unique_id
+        tests:
+          - unique
+          - not_null
+          
+  - name: stg_acc_gcs__pl_forecast
+    columns:
+      - name: unique_id
+        tests:
+          - unique
+          - not_null

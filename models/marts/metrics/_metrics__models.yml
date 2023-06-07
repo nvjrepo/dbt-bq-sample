@@ -1,0 +1,10 @@
+version: 2
+
+models:
+  - name: metrics_target_actual
+
+    columns:
+      - name: unique_id
+        tests:
+          - unique
+          - not_null

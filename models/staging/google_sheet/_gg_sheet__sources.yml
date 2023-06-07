@@ -1,0 +1,22 @@
+version: 2
+
+sources:
+  - name: google_sheets
+    database:  pacc-raw-data
+    dataset: GOOGLE_SHEETS
+    tables:
+      - name: yearly_target
+      - name: vas_management_code
+      - name: bis_code
+      - name: vas_chart_of_account
+      - name: raw_material_mapping
+      - name: daily_sale_targets
+      - name: customer_feebacks
+      - name: cs_booking
+
+  - name: past_target
+    database:  pacc-raw-data
+    dataset: PAST_TARGET
+    tables:
+      - name: yearly_target
+      - name: daily_sale_targets

@@ -1,0 +1,32 @@
+version: 2
+
+sources:
+  - name: accounting_all
+    database:  pacc-raw-data
+    dataset: IPOS_ACCOUNTING
+    tables:
+      - name: ledgers_analytics
+      - name: sale_detail_analytics
+      - name: WAREHOUSE_ANALYTICS
+      - name: WAREHOUSE_BALANCE_ACTUAL
+      - name: SALE_BASE_PRICE_DETAIL_ANALYTICS
+      - name: CA_BOM
+      - name: DM_ITEM 
+
+  
+  - name: accounting_baucat
+    database:  pacc-raw-data
+    dataset: IPOS_ACCOUNTING_BAUCAT
+    tables:
+      - name: ledgers_analytics
+      - name: sale_detail_analytics
+      - name: WAREHOUSE_ANALYTICS
+      - name: WAREHOUSE_BALANCE_ACTUAL
+
+  - name: accounting_historical
+    database:  pacc-raw-data
+    dataset: IPOS_ACC_HISTORICAL
+    tables:
+      - name: WAREHOUSE_ANALYTICS
+      - name: WAREHOUSE_BALANCE_ACTUAL
+      - name: CA_BOM

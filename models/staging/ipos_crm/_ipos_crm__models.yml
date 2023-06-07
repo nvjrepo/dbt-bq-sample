@@ -1,0 +1,23 @@
+version: 2
+
+models:
+  - name: stg_ipos_crm__campaigns
+    columns:
+      - name: campaign_id
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_ipos_crm__member_vouchers
+    columns:
+      - name: voucher_code
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_ipos_crm__membership_detail
+    columns:
+      - name: membership_id
+        tests:
+          - unique
+          - not_null

@@ -1,0 +1,12 @@
+version: 2
+
+sources:
+  - name: base_ehiring
+    database:  pacc-raw-data
+    dataset: BASEVN_EHIRING
+    tables:
+      - name: candidate
+      - name: contact
+      - name: interview
+      - name: opening
+      - name: pool
