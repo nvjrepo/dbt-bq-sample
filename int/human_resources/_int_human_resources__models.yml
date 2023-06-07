@@ -1,0 +1,17 @@
+version: 2
+
+models:
+  - name: int_daily_col
+    columns:
+      - name: unique_id
+        tests:
+          - unique
+          - not_null
+
+  - name: int_candidate_salary_joined
+    description: mapping salary for applied candidate
+    columns:
+      - name: candidate_id
+        tests:
+          - unique
+          - not_null

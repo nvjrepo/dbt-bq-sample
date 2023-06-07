@@ -1,0 +1,23 @@
+version: 2
+
+models:
+  - name: int_product_cogs
+    tests:
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns:
+            - date_month
+            - sku_code
+            
+  - name: int_sale_detail_outlets
+    columns:
+      - name: unique_id
+        tests:
+          - unique
+          - not_null
+
+  - name: int_sales
+    columns:
+      - name: unique_id
+        tests:
+          - unique
+          - not_null
